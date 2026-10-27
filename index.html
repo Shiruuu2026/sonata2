@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonata</title>
+    <style>
+        /* reset basico de margenes y pading*/
+        *{
+            margin:0;
+            padding: 0;
+            box-sizig: border-box;
+        }
+
+        body{
+        margin:2px;
+        font-family: 'Times New Roman', Times, serif;
+        background-color: rgb(255, 255, 255);
+        }
+
+        /*contenedor principal del head*/
+         .header{
+            display: flex; /*activa el flexbox*/
+            align-items: center; /*centra verticalmente los elemento*/
+            justify-content: space-between; /*espacio entre los elementos*/
+            width: 1301px;
+            height: 70px;
+            padding: 15px 30px;
+            background-color: rgb(234, 228, 228);
+            border-bottom: 2px solid black; /*borde inferior*/
+        }
+        
+        .logo {
+            font-size :24px;
+            font-weight: bold;
+            color: rgb(21, 2, 2);
+            padding:  5px 10px;
+            border: solid black;
+            border-radius: 3px; /*esquina redondeada*/
+        }
+
+        .nav{
+        display: flex;
+        gap: 20px; /*distancia entre los elementos*/
+        padding: 10px 0;
+        }
+
+        .nav a{
+         color: black;
+         text-decoration: none ;
+         font-size: 16px;
+         padding:16px ;
+         border-radius: 8px 12px;
+         transition: background-color 0.3s ;
+        }
+
+        .nav a:hover{
+            background-color: rgb(13, 130, 165);
+            
+        }
+
+        .nav p{
+         text-decoration: none;
+         font-size: 16px;
+         padding:16px ;
+         border-radius: 8px 12px;
+        }
+
+        .btn{
+         text-decoration: none ;
+         font-size: 16px;
+         padding:16px ;
+         border-radius: 8px 12px;
+         transition: background-color 0.3s ;
+         border: none;
+         cursor: pointer;
+        }
+
+        .footer{
+            display: flex; /*activa el flexbox*/
+            align-items: center; /*centra verticalmente los elemento*/
+            justify-content: space-between; /*espacio entre los elementos*/
+            width: 1301px;
+            height: 85px;
+            padding: 15px 30px;
+            background-color: rgb(234, 228, 228);
+            border-top: 2px solid black;
+        }
+
+         .nav2{
+        display: flex;
+        gap: 20px; /*distancia entre los elementos*/
+        padding: 10px 0;
+        }
+
+        .nav2 a{
+         color: black;
+         text-decoration: none ;
+         font-size: 16px;
+         padding:16px ;
+         border-radius: 8px 12px;
+         transition: background-color 0.3s ;
+        }
+
+        .nav2 a:hover{
+            background-color: rgb(13, 130, 165);
+            
+        }
+       
+        .menu{
+            display: flex;
+             background-color: rgb(234, 228, 228);
+        }
+
+        .aside{
+            display: flex;
+            width: 180px;
+            height: auto;
+            background-color: rgb(13, 130, 165);
+            padding: 20px;
+            border-radius: 8px 12px;
+        }
+
+        .navi li{
+         color: black;
+         text-decoration: none ;
+         font-size: 16px;
+         padding:16px ;
+         border-radius: 8px 12px;
+        }
+        .nav{
+            flex-wrap: wrap;
+            justify-content: center;
+        }    
+        
+        
+        .articulo{
+            display: flex;
+            background-color: rgb(61, 126, 184);
+            height: fit-content;
+            flex-direction: row;
+            width: 550px;
+            border-radius: 8px 12px;
+        }
+        .articulo img{
+            width: 300px;
+            height: 165px;
+            margin-right: 20px;
+            border-radius: 8px 12px;
+        }
+
+    .descripcion{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        border-radius: 8px 12px;
+        padding-left: 50px;
+    }
+
+    .contenido{
+        padding-left: 20px;
+    }
+
+    .lista { 
+        display: flex;
+         width: 100%; 
+         margin-top: 30px; 
+         background-color: rgb(234, 228, 228);
+        }
+    
+    .novedades { 
+        width: 50%;
+        height: auto;
+         padding: 20px; 
+        } 
+    
+    .top { 
+        width: 50%; 
+        padding: 20px; 
+        border-left: 2px solid black; 
+    } 
+    .novedades h3, .top h3 { 
+        text-align: center; 
+        margin-bottom: 25px; 
+    } 
+    .lista ul { 
+        list-style: none; 
+    } 
+    .lista li { 
+        padding: 15px 0; 
+    } 
+    .btn1 {
+         display: block; 
+         margin: 15px auto 0; 
+        }
+     .btn2{
+            display: block; 
+         margin: 15px auto 0; 
+        }
+        
+    @media (max-width: 600px){
+        .header {
+            flex-direction: colum;
+            height: auto;
+            padding: 15px;
+            gap: 15; 
+        }
+    }
+    </style>
+    
+</head>
+<body>
+   <header class="header"> 
+        <div class="logo"> 🎧 Sonata</div>
+            <nav class="nav">
+                <a href="#"> 🔍busqueda</a>
+            </nav>
+        <button class="btn"> registrarse</button>
+   </header> 
+
+   <main class="menu">
+    <aside class="aside">
+            <nav class="navi">
+                    <h2> Menú</h2>
+                    <ul>
+                        <li> Inicio</li>
+                        <li> Playlist</li>
+                        <li> Biblioteca</li>
+                        <li> Favoritos</li>
+                    </ul>
+                </nav>
+    </aside>
+    <div class="contenido">
+        <h2 href="#"> Bienvenidos!</h2>
+
+    
+        <article class="articulo">
+            <img src="https://tse4.mm.bing.net/th/id/OIP.0JfzSW7w9vu8mQJJ1LDiLQHaHa?r=0&pid=ImgDet&w=151&h=151&c=7&o=7&rm=3.jpg" alt="Huracan">
+            <div class="descripcion">
+                <h3> Album destacado</h3>
+                <h3> Huracan</h3>
+                <p> Robleis</p>
+            </div>
+        </article>
+
+        
+<div class="lista">
+
+    <div class="novedades">
+        <h3>Novedades</h3>
+
+        <ul>
+            <li>Michael Jackson</li>
+            <li>70's, 80's y 90's</li>
+            <li>Måneskin</li>
+        </ul>
+
+        <button class="btn1">ver más</button>
+    </div>
+
+    <div class="top">
+        <h3>Top canciones</h3>
+
+        <ul>
+            <li>1. Own my mind - 3:30</li>
+            <li>2. The driver - 2:40</li>
+            <li>3. Coraline - 3:15</li>
+            <li>4. Chicago - 3:45</li>
+            <li>5. beat it - 4:00</li>
+        </ul>
+
+        <button class="btn2">ver más</button>
+    </div>
+        </div>
+    </div>
+   </main>
+   
+   <footer class="footer">
+       <p> Tu musica, tu mundo</p>
+       <nav class="nav2">
+        <a href="https://www.instagram.com/robleis/?hl=en">intagram</a>
+        <a href="#">|X|</a>
+        <a href="https://www.youtube.com/@RobleisMusic">Youtube</a>
+       </nav>
+   </footer>
+
+</body>
+</html>
